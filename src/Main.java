@@ -7,11 +7,12 @@ public class Main {
         JFrame frame = new JFrame("GridBagLayout Window!");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(450, 200);
-        frame.setResizable(false);
+        //frame.setResizable(false);
 
 
         JPanel panel = new JPanel(new GridBagLayout());
         GridBagConstraints constraints = new GridBagConstraints();
+        constraints.anchor = GridBagConstraints.LINE_END;
         constraints.gridx = 0;
         constraints.gridy = 0;
         panel.add(new JLabel("Name"), constraints);
@@ -24,6 +25,7 @@ public class Main {
         constraints.gridy++;
         panel.add(new JLabel("Password"), constraints);
 
+        constraints.anchor  = GridBagConstraints.LINE_START;
         JTextField txtName = new JTextField(8);
         constraints.gridx = 1;
         constraints.gridy = 0;
