@@ -46,6 +46,11 @@ public class Main {
         constraints.gridy ++;
         panel.add(txtLogin, constraints);
 
+        constraints.gridx = 1;
+        constraints.gridy = 5;
+        constraints.anchor = GridBagConstraints.CENTER;
+        panel.add(new JButton("Save"), constraints);
+
         JTextField txtPassword = new JTextField(12);
         constraints.gridx = 1;
         constraints.gridy++;
